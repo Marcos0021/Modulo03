@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parada 20</title>
+</head>
+<body style="background-color: rgb(48, 48, 48);">
+    <div style="color: lightblue; font-size: 20px; text-align: center;">
+        <div>
+            <h1 style="font-family: Arial;">Eleição para melhor Yonkou 2022</h1>
+            <h2 id="Shanks" style="font-family: Arial;"></h2>
+            <h2 id="Barba" style="font-family: Arial;"></h2>
+            <h2 id="Buggy" style="font-family: Arial;"></h2>
+            <h2 id="Luffy" style="font-family: Arial;"></h2>
+            <h2 id="nulo" style="font-family: Arial;"></h2>
+        </div>
+    </div>
+
+    <script>
+        let opcao = 100
+        let cont1 = 0;
+        let cont2 = 0;
+        let cont3 = 0;
+        let cont4 = 0;
+        let cont5 = 0;
+
+        while(opcao != 10){
+            opcao = parseInt(prompt("Vote para o melhor Yonkou de 2022: 20 - Shanks | 17 - Barba negra | 33 - Buggy | 1 - Luffy | 0 - nulo/branco | 10 - Sair"));
+
+            switch(opcao){
+                case 20:
+                    document.getElementById('Shanks').innerHTML = `${cont1++}`;
+                    break;
+                case 17:
+                    document.getElementById('Barba').innerHTML = `${cont2++}`;
+                    break;
+                case 33:
+                    document.getElementById('Buggy').innerHTML = `${cont3++}`;
+                    break;
+                case 1:
+                    document.getElementById('Luffy').innerHTML = `${cont4++}`;
+                    break;
+                case 0:
+                    document.getElementById('nulo').innerHTML = `${cont5++}`;
+                    break;
+                case 10:
+                    alert("Obrigado por votar!"); 
+                    break;
+                default:
+                    alert("Opção inválida. Tente novamente!")
+            }
+        }
+        document.getElementById('Shanks').innerHTML = `O Yonkou Shanks teve ${cont1} votos`;
+        document.getElementById('Barba').innerHTML = `O Yonkou Barba negra teve ${cont2} votos`;
+        document.getElementById('Buggy').innerHTML = `O Yonkou Buggy teve ${cont3} votos`;
+        document.getElementById('Luffy').innerHTML = `O Yonkou Luffy teve ${cont4} votos`;
+        document.getElementById('nulo').innerHTML = `A opção nulo/branco teve ${cont5} votos`;
+    </script>
+</body>
+</html>
