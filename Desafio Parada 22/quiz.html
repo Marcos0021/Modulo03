@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        const jogador = prompt("Qual o seu nome?")
+        let op = 10
+        let cont = 0
+        let pontuacao = 0
+        let resposta
+
+        while(op != 0){
+            op = parseInt(prompt("Qual tema você deseja jogar? \n 1 - Zoologia \n 2 - Astronomia \n 3 - Curiosidades \n 0 - Sair"))
+
+            switch(op){
+                case 1:
+                        resposta = prompt("O maior animal que já viveu no planeta Terra foi um dinossauro! verdadeiro ou falso?")
+                        if(resposta == "falso"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a baleia azul é o maior animal que já viveu")
+                        }
+                        resposta = prompt("A teoria da evolução diz que o mais forte sobrevive! verdadeiro ou falso?")
+                        if(resposta == "falso"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a teoria da evolução diz que o ser mais adaptado sobrevive.")
+                        }
+                        resposta = prompt("Aves são dinossauros! verdadeiro ou falso?")
+                        if(resposta == "verdadeiro"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, sim as aves são dinossauros pois elas e os dinossauros avianos, enquanto o T-rex por exemplo é um dinossauro não aviano.")
+                        }
+                        alert(`${jogador}, sua pontuação final foi: ${pontuacao}`)
+                        pontuacao = 0
+                        break
+                case 2:
+                        resposta = prompt("Existe um Planeta X e ele está em rota da colisão com a Terra. verdadeiro ou falso?")
+                        if(resposta == "falso"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a baleia azul é o maior animal que já viveu")
+                        }
+                        resposta = prompt("As estrelas que estão no céu podem não mais existir verdadeiro ou falso?")
+                        if(resposta == "verdadeiro"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a teoria da evolução diz que o ser mais adaptado sobrevive.")
+                        }
+                        resposta = prompt("Marte tem nuvens. verdadeiro ou falso?")
+                        if(resposta == "verdadeiro"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, sim as aves são dinossauros pois elas e os dinossauros avianos, enquanto o T-rex por exemplo é um dinossauro não aviano.")
+                        }
+                        alert(`${jogador}, sua pontuação final foi: ${pontuacao}`)
+                        pontuacao = 0
+                        break
+                case 3:
+                        resposta = prompt("Segurar um espirro pode até mesmo causar o rompimento de um vaso sanguíneo. verdadeiro ou falso?")
+                        if(resposta == "falso"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a baleia azul é o maior animal que já viveu")
+                        }
+                        resposta = prompt("Existem mais átomos no corpo humano do que estrelas no Universo. verdadeiro ou falso?")
+                        if(resposta == "verdadeiro"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, a teoria da evolução diz que o ser mais adaptado sobrevive.")
+                        }
+                        resposta = prompt("A asa de um mosquito se move 1000 vezes por segundo. verdadeiro ou falso?")
+                        if(resposta == "verdadeiro"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, sim as aves são dinossauros pois elas e os dinossauros avianos, enquanto o T-rex por exemplo é um dinossauro não aviano.")
+                        }
+                        alert(`${jogador}, sua pontuação final foi: ${pontuacao}`)
+                        pontuacao = 0
+                        break
+                case 0:
+                    alert("Você saiu!!")
+                    break
+                default:
+                    alert("digite uma opção valida")
+                    break
+            }
+        }
+    </script>
+</body>
+</html>
