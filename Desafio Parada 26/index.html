@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parada 26</title>
+</head>
+<body>
+    <form id="formulario" onsubmit="return validacao()" action="" method="post">
+        <label>Nome</label>
+        <input type="text" placeholder="Nome" id="nome">
+        <label>Sobrenome</label>
+        <input type="text" placeholder="Sobrenome" id="sobrenome">
+        <br><br>
+        <label>Email:</label>
+        <input type="mail" placeholder="Ex: exemplo@gmail.com" id="email">
+        <br><br>
+        <label>Gênero</label>
+        <input type="radio" name="genero" value="Masculino"> Masculino
+        <input type="radio" name="genero" value="Feminino"> Feminino
+        <br><br>
+        <label>Cidade</label>
+        <select>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Brasília</option>
+            <option>Salvador</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+
+<script>
+    function validacao() {
+
+        let nome = document.getElementById("nome").value
+
+        if(nome == "") {
+            alert("Preencha seu nome")
+            document.getElementById("nome").focus()
+            return false
+        }
+
+        let sobrenome = document.getElementById("sobrenome").value
+
+        if(sobrenome == "") {
+            alert("Preencha seu sobrenome")
+            document.getElementById("sobrenome").focus()
+            return false
+        }
+
+        let alternativas = document.querySelectorAll("input[name=genero]:checked");
+
+        if (alternativas.length < 1) {
+            alert("Por favor, selecione o seu gênero.");
+        }
+
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            if(email.value.match(mailformat)) {
+                email.focus()
+            }else{
+                alert("email invalido")
+                email.focus()
+                return false
+            }
+        return true
+    }
+</script>
+</html>
